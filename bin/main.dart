@@ -59,5 +59,6 @@ print(longestZero("01100001011000"));
 print(longestZero("100100100"));
 }
 
+
 // Challenge 3
 // Write 2 test cases to test both the previous functions in test.dart
