@@ -7,6 +7,16 @@
 //
 // longestZero("11111") ➞ ""
 
+String longestZero(var string){
+  String result = '';
+  //int count = 0;
+  for (int i = 0; i < string.length; i++){
+    if(string[i] == '0'){
+      result = '$result${string[i]}';
+    }
+  }
+  return (result);
+}
 
 // Challenge 2
 // Create a function that performs an even-odd transform to an array, n times. Each even-odd transformation:
@@ -21,8 +31,32 @@
 //
 // evenOddTransform([1, 2, 3], 1) ➞ [3, 0, 5]
 
-main() {
+List evenOddTransform(List list, int times) {
+  int i = 0;
+  List result = [];
+  int number;
+    for (int x in list) {
+      if (x % 2 == 0) {
+        number = x - (2 * times);
+        result.add(number);
+      }
+      else {
+        number = x + (2 * times);
+        result.add(number);
+      }
+    }
 
+  return result;
+}
+
+main() {
+List x = [];
+x = evenOddTransform([3, 4, 9], 3);
+print(x);
+print(evenOddTransform([0, 0, 0], 10));
+print(evenOddTransform([1, 2, 3], 1));
+print(longestZero("01100001011000"));
+print(longestZero("100100100"));
 }
 
 // Challenge 3
